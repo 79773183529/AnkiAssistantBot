@@ -1,0 +1,22 @@
+number;topic_number;heading;question;answer_text;answer_code
+1;4;Файлы;Как называется специальный объект в программе, куда попадает весь текст, который ввёл пользователь.  Данные хранятся в нем до тех пор, пока программа их не прочитала.;Поток ввода  (sys.stdin);import sys\n\nfor line in sys.stdin:\n    print(line.strip('\n'))
+2;4;Файлы;Чем различаются функция print() и потоковый вывод sys.stdout?;Функция print() автоматически преобразовывает данные к строковому типу\n\nФункция print() автоматически добавляет перенос на новую строку;import sys\n\nsys.stdout.write('Hello world!')
+3;4;Файлы;Как можно прочитать csv-файл с помощью встроенного модуля csv.;С помощью объекта reader().;"import csv\n\nwith open('file_name.csv', encoding='utf-8') as file:\n\n    rows = csv.reader(file, delimiter=';', quotechar='""')\n\n    for row in rows:\n        print(row)"
+4;;;Как называется специальный объект модуля csv, который поддерживает создание объекта-словаря на основе названий столбцов?;DictReader;"import csv\n\nwith open('products.csv', encoding='utf-8') as file:\n\n    rows = csv.DictReader(file, delimiter=';', quotechar='""')\n\n    for row in rows:\n        print(row)"
+5;;;Какой объект используется для записи данных в файл csv?;Для записи данных в csv файл можно использовать специальный writer объект;import csv\n\ncolumns = ['first_name', 'second_name', 'class_number', 'class_letter']\n\ndata = [['Тимур', 'Гуев', 11, 'А'], ['Руслан', 'Чаниев', 9, 'Б'], ['Артур', 'Харисов', 10, 'В']]\n\nwith open('students.csv', 'w', encoding='utf-8', newline='') as file:\n\n    writer = csv.writer(file)\n\n    writer.writerow(columns)\n\n    for row in data:\n        writer.writerow(row)
+6;;;;;
+7;;;;;
+8;;;;;
+9;;;;;
+10;;;;;
+11;;;;;
+12;;;;;
+13;;;;;
+14;;;;;
+15;;;;;
+16;;;;;
+17;;;;;
+18;;;;;
+19;;;;;
+20;;;;;
+21;;;;;
